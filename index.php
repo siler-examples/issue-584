@@ -2,10 +2,9 @@
 
 namespace App;
 
-use Siler\{Route, Http\Response};
+use Siler\Route;
+use function Siler\Functional\puts;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
-Route\get('/test', static function (): void {
-    Response\text('Hello, World!');
-});
+Route\get('/test', puts('Hello, World!'));
